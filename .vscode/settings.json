@@ -7,7 +7,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "workbench.colorTheme": "Eva Dark Bold",
     "material-icon-theme.activeIconPack": "nest",
-    "editor.autoClosingQuotes": "languageDefined",
     "javascript.preferences.quoteStyle": "single",
     "typescript.preferences.quoteStyle": "single"
 }
