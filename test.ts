@@ -1,21 +1,26 @@
-let info: {
-	officeId: number,
-	isOpened: Boolean,
-	contacts: {
-		phone: string,
-		email: string,
-		address: {
-			city: string;
-		};
-	};
-} = {
-	officeId: 45,
-	isOpened: false,
-	contacts: {
-		phone: '+7 (903) 123-45-67',
-		email: 'my@email.com',
-		address: {
-			city: 'Minsk'
-		}
-	}
-};
+enum QuestionStatus {
+	StatusPublished = 'published',
+	StatusDraft = 'draft',
+	StatusDeleted = 'deleted'
+}
+
+async function getFlags(req: {
+	topicId: number,
+	status: QuestionStatus;
+}): Promise<{
+	question: string;
+	answer: string;
+	tags: string[];
+	likes: number;
+	status: QuestionStatus;
+}[]> {
+	const res = await fetch('/flags', {
+		method: 'POST',
+		body: JSON.stringify(req)
+	});
+
+	const data = await res.json();
+	return data;
+}
+
+
