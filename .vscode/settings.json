@@ -8,5 +8,7 @@
     "workbench.colorTheme": "Eva Dark Bold",
     "material-icon-theme.activeIconPack": "nest",
     "javascript.preferences.quoteStyle": "single",
-    "typescript.preferences.quoteStyle": "single"
+    "typescript.preferences.quoteStyle": "single",
+    "javascript.format.semicolons": "insert",
+    "typescript.format.semicolons": "insert"
 }
